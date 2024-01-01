@@ -7,14 +7,14 @@ const healthController = async (
     const {PORT, HOST} = request.server.getEnv();
   try {
     
-    const test = await request.server.octokit.request('GET /repos/{owner}/{repo}/contributors', {
-      owner: 'bilelzr',
-      repo: "testProjectOne",
+    const test = await request.server.octokit.request('GET /repos/{owner}/{repo}/collaborators', {
+      owner: 'VINCITORI-del-capital',
+      repo: 'project-federateur',
       headers: {
         'X-GitHub-Api-Version': '2022-11-28'
       }
     })
-    console.log(test)
+    console.log(test.data)
 
     // await request.server.octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
     //   owner: 'bilelzr',
@@ -26,13 +26,13 @@ const healthController = async (
     //   }
     // })
 
-    console.log(await request.server.octokit.request('GET /repos/{owner}/{repo}/invitations', {
-      owner: 'bilelzr',
-      repo: 'testProjectOne',
-      headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-      }}
-    ))
+    // console.log(await request.server.octokit.request('GET /repos/{owner}/{repo}/invitations', {
+    //   owner: 'bilelzr',
+    //   repo: 'testProjectOne',
+    //   headers: {
+    //     'X-GitHub-Api-Version': '2022-11-28'
+    //   }}
+    // ))
     
 
   } catch (error) {

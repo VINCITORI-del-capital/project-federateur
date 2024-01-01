@@ -11,6 +11,7 @@ const createApp = () => {
 
   //routes
   app.register(routes.health, { prefix: "/" });
+  app.register(routes.github, { prefix: "/github" });
 
   return app;
 };
