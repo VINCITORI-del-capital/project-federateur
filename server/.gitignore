@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+coverage
+.DS_Store
+.eslintcache
+.scannerwork
+junit-reports.xml
+snyk_results.html

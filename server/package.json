@@ -1,0 +1,27 @@
+{
+  "name": "project-federateur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only app/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "envalid": "^8.0.0",
+    "fastify": "^4.25.2",
+    "fastify-plugin": "^4.5.1",
+    "node-fetch": "^2.7.0",
+    "octokit": "^3.1.2",
+    "ts-node-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}
