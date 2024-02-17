@@ -16,8 +16,10 @@
     "envalid": "^8.0.0",
     "fastify": "^4.25.2",
     "fastify-plugin": "^4.5.1",
+    "fastify-socket.io": "^5.0.0",
     "node-fetch": "^2.7.0",
     "octokit": "^3.1.2",
+    "socket.io": "^4.7.4",
     "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {

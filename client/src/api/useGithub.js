@@ -2,7 +2,7 @@ import useSWR from "swr";
 import axios from "axios";
 
 const fetcher = (url) =>
-  axios.get("http://localhost:5585" + url).then((res) => res.data);
+  axios.get("http://localhost:5000").then((res) => res.data);
 
 const useRepositories = () => {
   const key = `/github/repositories`;
@@ -13,7 +13,7 @@ const useRepositories = () => {
 const useCollaborators = (repo) => {
   const key = `/github/${repo}/collaborators`
 
-  return useSWR(key, fetcher)
+  return useSWR(repo ? key: null , fetcher)
 }
 
 const useIssues = (repo) => {

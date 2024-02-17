@@ -3,6 +3,7 @@ import cors from "@fastify/cors";
 
 import * as routes from "./routes";
 import * as plugins from "./plugins";
+import { Server } from "socket.io";
 
 const createApp = () => {
   const app = fastify();
@@ -36,12 +37,15 @@ const createApp = () => {
     credentials: true
   });
 
+
+  app.register(plugins.socket);
   app.register(plugins.envalid);
   app.register(plugins.octokit);
 
   //routes
   app.register(routes.health, { prefix: "/" });
   app.register(routes.github, { prefix: "/github" });
+  app.register(routes.webhook, { prefix: "/webhook" });
 
   return app;
 };

@@ -9,7 +9,8 @@ const env = cleanEnv(process.env, {
   PORT: num({ devDefault: 3000 }),
   HOST: str({ devDefault: "127.0.0.1" }),
   TOKEN: str(),
-  ORG: str()
+  ORG: str(),
+  WEBHOOK_URL: str(),
 });
 
 type GetEnv = () => typeof env;
